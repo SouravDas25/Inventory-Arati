@@ -1,0 +1,4 @@
+
+
+
+ionic cordova run android --release -- --keystore="D:\Cloud\OneDrive\Programming\android-key\key-android.jks" --storePassword=wicinvenm2904 --alias=android_key --password=wicinvenm2904

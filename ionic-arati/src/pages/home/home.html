@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar mainPageNavBarColor color="primary">
+    <ion-title>
+      Home | Arati
+    </ion-title>
+    <button ion-button menuToggle start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="danger-color">
+    <div class="fa-5x text-center py-5 text-white">
+        <ion-icon name="shirt"></ion-icon>
+    </div>
+    
+    <ion-card-content class="blue-grey lighten-5">
+      <ion-card-title>
+        Our Products
+        <button ion-button color="primary" class="float-right font-bold " ion-button outline item-end icon-left (click)="openProduct()"> View All</button>
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="success-color">
+      <div class="fa-5x text-center py-5 text-white">
+          <ion-icon name="document"></ion-icon>
+      </div>
+      
+      <ion-card-content class="blue-grey lighten-5">
+        <ion-card-title>
+          Our Bills
+          <button ion-button color="primary" class="float-right font-bold " 
+          ion-button outline item-end icon-left (click)="openBills()"> View All</button>
+        </ion-card-title>
+      </ion-card-content>
+    </ion-card>
+
+  <ion-card class="primary-color">
+      <div class="fa-5x text-center py-5 text-white">
+          <ion-icon name="cog"></ion-icon>
+      </div>
+      
+      <ion-card-content class="blue-grey lighten-5">
+        <ion-card-title>
+          Settings
+          <button ion-button color="danger" class="float-right font-bold " 
+          ion-button outline item-end icon-left (click)="openSettings()">
+           View Settings
+          </button>
+        </ion-card-title>
+      </ion-card-content>
+    </ion-card>
+
+
+</ion-content>

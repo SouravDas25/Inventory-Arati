@@ -1,0 +1,52 @@
+<!--
+  Generated template for the ProductPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar mainPageNavBarColor color="primary">
+    <ion-title>
+      Products
+    </ion-title>
+    <button ion-button menuToggle start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="crescent" refreshingText="Refreshing..."></ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      <h1>
+        <small>
+          <ion-icon name="arrow-forward" padding-right padding-top></ion-icon>
+        </small>
+        {{ item.name }}
+        <span *ngFor="let size of item.sizes">
+          <span *ngIf="size.qty > 0;then mainPart else elsePart"></span>
+          <ng-template #mainPart>
+            <span class="badge badge-primary float-right">{{ size.size }}</span>
+          </ng-template>
+          <ng-template #elsePart>
+            <span class="badge badge-danger float-right">{{ size.size }}</span>
+          </ng-template>
+        </span>
+      </h1>
+      <p>
+        {{ item.notes }}
+      </p>
+    </button>
+  </ion-list>
+
+  <ion-fab bottom right>
+    <button ion-fab (click)="openAddNewPage()" color="secondary">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>

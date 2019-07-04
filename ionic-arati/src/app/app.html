@@ -1,0 +1,19 @@
+<ion-menu [content]="mycontent">
+    <ion-content>
+        <ion-list>
+            <ion-item>
+                <img width="160" height="80" src="assets/imgs/logo-img.png">
+            </ion-item>
+            <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+                <ion-icon name="{{ p.icon }}" padding-right></ion-icon>
+                {{p.title}}
+            </button>
+            <ion-item menuClose detail-none>
+                <ion-icon name="close" padding-right></ion-icon>
+                Close Menu
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
