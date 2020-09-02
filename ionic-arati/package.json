@@ -46,7 +46,7 @@
     "cordova-plugin-x-toast": "^2.6.2",
     "cordova-sqlite-storage": "^2.3.2",
     "font-awesome": "^4.7.0",
-    "googleapis": "^27.0.0",
+    "googleapis": "^39.1.0",
     "hammerjs": "^2.0.8",
     "ionic-angular": "3.9.2",
     "ionic-orm": "0.0.5",
